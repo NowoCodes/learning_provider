@@ -62,7 +62,7 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       onChanged: (newText) {
-        Provider.of<Data>(context).changeString(newText);
+        Provider.of<Data>(context, listen: false).changeString(newText);
       },
     );
   }
